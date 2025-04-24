@@ -1,4 +1,4 @@
-# AI Agent Study with LlamaIndex and Ollama
+# Hugging Face`s Agents Course
 
 This project is a simple study of AI agents using [`llama-index`](https://github.com/jerryjliu/llama_index) and [Ollama](https://ollama.com/).
 The course is available in:
@@ -13,17 +13,14 @@ The file [`agents/using_sample_tool.py`](agents/using_sample_tool.py) demonstrat
   - Stateless: The agent calls the tool directly based on the prompt.
   - Stateful: The agent remembers prior context using `Context`, enabling memory-like behavior.
 
-### Sample Tool
+## Multi-Agent Workflow Example
+The file agents/multi_agent_workflow.py showcases:
+- A multi-agent architecture using ReActAgent with tools like add and subtract.
+- A calculator agent that can handle math operations.
+- An info_lookup agent designed to query external sources (e.g., a RAG system).
+- Use of AgentWorkflow to compose and route between agents based on the user prompt.
 
-The `multiply` function is a basic example of a tool that can be called by the AI agent when needed:
+### Key Features
+- ReActAgent lets the LLM reason and act step-by-step using thoughts, actions, and observations.
+- Tool delegation: Different agents are responsible for different kinds of tasks.
 
-```python
-def multiply(a: int, b: int) -> int:
-    """Multiplies two integers and returns the resulting integer"""
-    return a * b
-```
-
-### How to Run
-```bash
-python agents/using_sample_tool.py
-```
