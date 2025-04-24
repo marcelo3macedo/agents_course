@@ -24,3 +24,8 @@ The file agents/multi_agent_workflow.py showcases:
 - ReActAgent lets the LLM reason and act step-by-step using thoughts, actions, and observations.
 - Tool delegation: Different agents are responsible for different kinds of tasks.
 
+## Workflows
+The file agents/multi_step_workflow.py demonstrates:
+- How to build custom workflows using the Workflow API from llama-index.
+- Creating step-based execution with state passed between steps.
+- Use of custom event classes like ProcessingEvent for structured inter-step communication.
