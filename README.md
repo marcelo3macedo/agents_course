@@ -29,3 +29,10 @@ The file agents/multi_step_workflow.py demonstrates:
 - How to build custom workflows using the Workflow API from llama-index.
 - Creating step-based execution with state passed between steps.
 - Use of custom event classes like ProcessingEvent for structured inter-step communication.
+
+## Langgraph
+Alfred’s email processing system:
+- Read incoming emails
+- Classify them as spam or legitimate
+- Draft a preliminary response for legitimate emails
+- Send information to Mr. Wayne when legitimate (printing only)
